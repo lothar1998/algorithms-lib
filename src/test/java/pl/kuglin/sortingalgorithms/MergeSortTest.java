@@ -2,7 +2,6 @@ package pl.kuglin.sortingalgorithms;
 
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.Random;
 
 import static org.junit.Assert.assertTrue;
@@ -29,13 +28,9 @@ public class MergeSortTest {
             for (int j = 0; j < array.length; j++)
                 array[j] = random.nextInt(MAX_ARRAY_VALUE);
 
-            System.out.println(Arrays.toString(array));
-
             mergeSort.sort(array);
 
             boolean isProperOrder = true;
-
-            System.out.println(Arrays.toString(array));
 
             for (int j = 0; j < array.length - 1; j++)
                 if (array[j] > array[j + 1]) {
