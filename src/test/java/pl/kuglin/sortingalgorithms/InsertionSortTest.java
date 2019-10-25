@@ -19,7 +19,7 @@ public class InsertionSortTest {
 
         SortingAlgorithm<Integer> insertionSort = new InsertionSort<>();
 
-        for (int i = 0; i < TESTED_EXAMPLES - 1; i++) {
+        for (int i = 0; i < TESTED_EXAMPLES; i++) {
 
             int arraySize = random.nextInt(ARRAY_MAX_SIZE);
 
@@ -47,7 +47,7 @@ public class InsertionSortTest {
 
         SortingAlgorithm<Double> insertionSort = new InsertionSort<>();
 
-        for (int i = 0; i < TESTED_EXAMPLES - 1; i++) {
+        for (int i = 0; i < TESTED_EXAMPLES; i++) {
 
             int arraySize = random.nextInt(ARRAY_MAX_SIZE);
 

@@ -17,9 +17,9 @@ public class BubbleSortTest {
     @Test
     public void sortInt() {
 
-        SortingAlgorithm<Integer> insertionSort = new BubbleSort<>();
+        SortingAlgorithm<Integer> bubbleSort = new BubbleSort<>();
 
-        for (int i = 0; i < TESTED_EXAMPLES - 1; i++) {
+        for (int i = 0; i < TESTED_EXAMPLES; i++) {
 
             int arraySize = random.nextInt(ARRAY_MAX_SIZE);
 
@@ -28,7 +28,7 @@ public class BubbleSortTest {
             for (int j = 0; j < array.length; j++)
                 array[j] = random.nextInt(MAX_ARRAY_VALUE);
 
-            insertionSort.sort(array);
+            bubbleSort.sort(array);
 
             boolean isProperOrder = true;
 
@@ -45,9 +45,9 @@ public class BubbleSortTest {
     @Test
     public void sortDouble() {
 
-        SortingAlgorithm<Double> insertionSort = new BubbleSort<>();
+        SortingAlgorithm<Double> bubbleSort = new BubbleSort<>();
 
-        for (int i = 0; i < TESTED_EXAMPLES - 1; i++) {
+        for (int i = 0; i < TESTED_EXAMPLES; i++) {
 
             int arraySize = random.nextInt(ARRAY_MAX_SIZE);
 
@@ -56,7 +56,7 @@ public class BubbleSortTest {
             for (int j = 0; j < array.length; j++)
                 array[j] = random.nextDouble() * MAX_ARRAY_VALUE;
 
-            insertionSort.sort(array);
+            bubbleSort.sort(array);
 
             boolean isProperOrder = true;
 

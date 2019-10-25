@@ -30,21 +30,18 @@ public class MergeSort<T extends Comparable<T>> implements SortingAlgorithm<T> {
 
         int k = p;
 
-        while (k < r) {
+        while (i < n1 && j < n2) {
             if (leftArray[i].compareTo(rightArray[j]) < 0)
                 array[k++] = leftArray[i++];
             else
                 array[k++] = rightArray[j++];
-
-            if (i == n1 || j == n2)
-                break;
         }
 
         if (i == n1) {
-            while (k <= r)
+            while (j < n2)
                 array[k++] = rightArray[j++];
         } else if (j == n2) {
-            while (k <= r)
+            while (i < n1)
                 array[k++] = leftArray[i++];
         }
     }
