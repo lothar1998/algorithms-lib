@@ -7,6 +7,7 @@
 - ```Bubble sort```
 - ```Insertion sort```
 - ```Merge sort```
+- ```Heap sort```
 - ```Maximum subarray```
 
 
