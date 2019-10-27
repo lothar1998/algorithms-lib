@@ -16,7 +16,7 @@ public class HeapSort<T extends Comparable<T>> implements SortingAlgorithm<T> {
     private void buildMaxHeap(T[] array) {
         int heapSize = array.length;
 
-        for (int i = (heapSize - 1) / 2; i >= 0; i--)
+        for (int i = ((heapSize / 2) - 1); i >= 0; i--)
             maxHeap(array, i, heapSize);
     }
 
@@ -41,11 +41,11 @@ public class HeapSort<T extends Comparable<T>> implements SortingAlgorithm<T> {
     }
 
     private int left(int i) {
-        return 2 * i;
+        return 2 * i + 1;
     }
 
     private int right(int i) {
-        return 2 * i + 1;
+        return 2 * i + 2;
     }
 
     private void swap(T[] array, int i, int j) {
