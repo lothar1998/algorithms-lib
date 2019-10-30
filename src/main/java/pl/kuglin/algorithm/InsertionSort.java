@@ -1,4 +1,4 @@
-package pl.kuglin.sortingalgorithms;
+package pl.kuglin.algorithm;
 
 public class InsertionSort<T extends Comparable<T>> implements SortingAlgorithm<T> {
     @Override

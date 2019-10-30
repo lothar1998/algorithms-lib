@@ -1,4 +1,4 @@
-package pl.kuglin.arrayalghoritms;
+package pl.kuglin.algorithm;
 
 import org.junit.Test;
 

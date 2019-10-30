@@ -1,4 +1,4 @@
-package pl.kuglin.sortingalgorithms;
+package pl.kuglin.algorithm;
 
 import org.junit.Test;
 

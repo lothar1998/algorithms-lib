@@ -1,4 +1,4 @@
-package pl.kuglin.sortingalgorithms;
+package pl.kuglin.algorithm;
 
 @FunctionalInterface
 public interface SortingAlgorithm<T extends Comparable<T>> {

@@ -1,7 +1,7 @@
 package pl.kuglin;
 
-import pl.kuglin.arrayalghoritms.MaxSubarray;
-import pl.kuglin.sortingalgorithms.SortingAlgorithm;
+import pl.kuglin.algorithm.MaxSubarray;
+import pl.kuglin.algorithm.SortingAlgorithm;
 
 public class Utilities {
 

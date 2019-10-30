@@ -1,4 +1,4 @@
-package pl.kuglin.sortingalgorithms;
+package pl.kuglin.algorithm;
 
 import org.junit.Test;
 
@@ -6,7 +6,7 @@ import java.util.Random;
 
 import static org.junit.Assert.assertTrue;
 
-public class HeapSortTest {
+public class MergeSortTest {
 
     private static final int TESTED_EXAMPLES = 1000;
     private static final int ARRAY_MAX_SIZE = 1000;
@@ -17,7 +17,7 @@ public class HeapSortTest {
     @Test
     public void sortInt() {
 
-        SortingAlgorithm<Integer> heapSort = new HeapSort<>();
+        SortingAlgorithm<Integer> mergeSort = new MergeSort<>();
 
         for (int i = 0; i < TESTED_EXAMPLES; i++) {
 
@@ -28,7 +28,7 @@ public class HeapSortTest {
             for (int j = 0; j < array.length; j++)
                 array[j] = random.nextInt(MAX_ARRAY_VALUE);
 
-            heapSort.sort(array);
+            mergeSort.sort(array);
 
             boolean isProperOrder = true;
 
@@ -45,7 +45,7 @@ public class HeapSortTest {
     @Test
     public void sortDouble() {
 
-        SortingAlgorithm<Double> heapSort = new HeapSort<>();
+        SortingAlgorithm<Double> mergeSort = new MergeSort<>();
 
         for (int i = 0; i < TESTED_EXAMPLES; i++) {
 
@@ -56,7 +56,7 @@ public class HeapSortTest {
             for (int j = 0; j < array.length; j++)
                 array[j] = random.nextDouble() * MAX_ARRAY_VALUE;
 
-            heapSort.sort(array);
+            mergeSort.sort(array);
 
             boolean isProperOrder = true;
 
