@@ -8,6 +8,7 @@
 - ```Insertion sort```
 - ```Merge sort```
 - ```Heap sort```
+- ```Quick sort```
 - ```Maximum subarray```
 - ```Heap Priority Queue```
 
