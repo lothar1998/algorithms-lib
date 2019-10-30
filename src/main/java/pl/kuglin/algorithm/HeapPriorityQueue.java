@@ -36,12 +36,16 @@ public class HeapPriorityQueue<T> {
 
     public void increaseKey(int i, int key) {
         if (key >= queue.get(i).getPriority()) {
-            queue.get(i).setPriority(key);
 
-            while (i > 0 && queue.get(parent(i)).getPriority() < queue.get(i).getPriority()) {
-                swap(i, parent(i));
+            Entry temp = queue.get(i);
+
+            while (i > 0 && queue.get(parent(i)).getPriority() < key) {
+                queue.set(i, queue.get(parent(i)));
                 i = parent(i);
             }
+
+            temp.setPriority(key);
+            queue.set(i, temp);
         }
     }
 
