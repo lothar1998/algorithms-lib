@@ -10,6 +10,7 @@
 - ```Heap sort```
 - ```Quick sort```
 - ```Counting sort```
+- ```Radix sort```
 - ```Maximum subarray```
 - ```Heap Priority Queue```
 
