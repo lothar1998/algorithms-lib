@@ -9,6 +9,7 @@
 - ```Merge sort```
 - ```Heap sort```
 - ```Quick sort```
+- ```Counting sort```
 - ```Maximum subarray```
 - ```Heap Priority Queue```
 
