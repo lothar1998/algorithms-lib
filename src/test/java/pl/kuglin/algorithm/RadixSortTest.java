@@ -14,8 +14,8 @@ import static org.junit.Assert.assertTrue;
 
 public class RadixSortTest {
 
-    private static final int MAX_RAND_VALUE = 5;
-    private static final int NUMBER_OF_OBJECTS = 100;
+    private static final int MAX_RAND_VALUE = 10; //maximum 10, because we have only 10 digits in decimal system
+    private static final int NUMBER_OF_OBJECTS = 1000;
 
     private static RadixSort<A> radixSort;
     private static List<A> list;
