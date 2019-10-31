@@ -1,6 +1,11 @@
 package pl.kuglin.algorithm;
 
+import java.util.Random;
+
 public class QuickSort<T extends Comparable<T>> implements SortingAlgorithm<T> {
+
+    private static Random random = new Random();
+
     @Override
     public void sort(T[] array) {
         quickSort(array, 0, array.length - 1);
@@ -8,10 +13,15 @@ public class QuickSort<T extends Comparable<T>> implements SortingAlgorithm<T> {
 
     private void quickSort(T[] array, int p, int r) {
         if (p < r) {
-            int q = partition(array, p, r);
+            int q = randomPartition(array, p, r);
             quickSort(array, p, q - 1);
             quickSort(array, q + 1, r);
         }
+    }
+
+    private int randomPartition(T[] array, int p, int r) {
+        swap(array, r, random.nextInt((r - p) + 1) + p);
+        return partition(array, p, r);
     }
 
     private int partition(T[] array, int p, int r) {
