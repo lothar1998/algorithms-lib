@@ -10,20 +10,23 @@ public class CountingSort implements SortingAlgorithm<Integer> {
         if (array.length < 1)
             return;
 
+        int min = Collections.min(Arrays.asList(array));
+        int max = Collections.max(Arrays.asList(array));
+
         Integer[] b = new Integer[array.length];
-        Integer[] c = new Integer[Collections.max(Arrays.asList(array)) + 1];
+        Integer[] c = new Integer[max - min + 1];
 
         Arrays.fill(c, 0);
 
         for (Integer integer : array)
-            c[integer]++;
+            c[integer - min]++;
 
         for (int i = 1; i < c.length; i++)
             c[i] += c[i - 1];
 
         for (int i = array.length - 1; i >= 0; i--) {
-            b[c[array[i]] - 1] = array[i];
-            c[array[i]]--;
+            b[c[array[i] - min] - 1] = array[i];
+            c[array[i] - min]--;
         }
 
         System.arraycopy(b, 0, array, 0, b.length);

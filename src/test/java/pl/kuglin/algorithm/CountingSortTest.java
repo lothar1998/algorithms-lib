@@ -26,7 +26,7 @@ public class CountingSortTest {
             Integer[] array = new Integer[arraySize];
 
             for (int j = 0; j < array.length; j++)
-                array[j] = random.nextInt(MAX_ARRAY_VALUE);
+                array[j] = random.nextInt(MAX_ARRAY_VALUE) - MAX_ARRAY_VALUE / 2;
 
             countingSort.sort(array);
 
