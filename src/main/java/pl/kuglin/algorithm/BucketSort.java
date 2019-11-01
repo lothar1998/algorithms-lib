@@ -3,6 +3,10 @@ package pl.kuglin.algorithm;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * Bucket sort implementation
+ * Algorithm should be used only for uniformly distributed double values from range [0,1)
+ */
 @SuppressWarnings({"ExplicitArrayFilling", "unchecked"})
 public class BucketSort implements SortingAlgorithm<Double> {
 
