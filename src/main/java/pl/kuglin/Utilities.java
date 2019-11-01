@@ -29,4 +29,16 @@ public class Utilities {
     public static MaxSubarray.Result findMaxSubarray(Double[] arr, int begin, int end) {
         return MaxSubarray.findMaximumSubarray(arr, begin, end);
     }
+
+    public static <T> void swap(List<T> list, int i, int j) {
+        T temp = list.get(i);
+        list.set(i, list.get(j));
+        list.set(j, temp);
+    }
+
+    public static <T> void swap(T[] array, int i, int j) {
+        T temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 }

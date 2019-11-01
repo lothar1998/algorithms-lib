@@ -2,6 +2,7 @@ package pl.kuglin.algorithm;
 
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 public class CountingSort implements SortingAlgorithm<Integer> {
     @Override
@@ -30,5 +31,14 @@ public class CountingSort implements SortingAlgorithm<Integer> {
         }
 
         System.arraycopy(b, 0, array, 0, b.length);
+    }
+
+    @Override
+    public void sort(List<Integer> list) {
+        Integer[] array = list.toArray(new Integer[0]);
+
+        sort(array);
+
+        Collections.copy(list, Arrays.asList(array));
     }
 }
