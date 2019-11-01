@@ -11,6 +11,7 @@
 - ```Quick sort```
 - ```Counting sort```
 - ```Radix sort```
+- ```Bucket sort```
 - ```Maximum subarray```
 - ```Heap Priority Queue```
 
