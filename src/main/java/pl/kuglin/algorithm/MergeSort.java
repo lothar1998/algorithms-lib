@@ -1,40 +1,52 @@
 package pl.kuglin.algorithm;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
-public class MergeSort<T extends Comparable<T>> implements SortingAlgorithm<T> {
+public class MergeSort<T extends Comparable<T>> implements ComparisonSortingAlgorithm<T> {
+
     @Override
     public void sort(T[] array) {
-        mergeSort(array, 0, array.length - 1);
+        sort(array, Comparable::compareTo);
     }
 
     @Override
     public void sort(List<T> list) {
-        mergeSort(list, 0, list.size() - 1);
+        sort(list, Comparable::compareTo);
     }
 
-    private void mergeSort(T[] array, int begin, int end) {
+    @Override
+    public void sort(T[] array, Comparator<T> comparator) {
+        mergeSort(array, 0, array.length - 1, comparator);
+    }
+
+    @Override
+    public void sort(List<T> list, Comparator<T> comparator) {
+        mergeSort(list, 0, list.size() - 1, comparator);
+    }
+
+    private void mergeSort(T[] array, int begin, int end, Comparator<T> comparator) {
         int q;
         if (begin < end) {
             q = (begin + end) / 2;
-            mergeSort(array, begin, q);
-            mergeSort(array, q + 1, end);
-            merge(array, begin, q, end);
+            mergeSort(array, begin, q, comparator);
+            mergeSort(array, q + 1, end, comparator);
+            merge(array, begin, q, end, comparator);
         }
     }
 
-    private void mergeSort(List<T> list, int begin, int end) {
+    private void mergeSort(List<T> list, int begin, int end, Comparator<T> comparator) {
         int q;
         if (begin < end) {
             q = (begin + end) / 2;
-            mergeSort(list, begin, q);
-            mergeSort(list, q + 1, end);
-            merge(list, begin, q, end);
+            mergeSort(list, begin, q, comparator);
+            mergeSort(list, q + 1, end, comparator);
+            merge(list, begin, q, end, comparator);
         }
     }
 
-    private void merge(T[] array, int p, int q, int r) {
+    private void merge(T[] array, int p, int q, int r, Comparator<T> comparator) {
         int n1 = q - p + 1;
         int n2 = r - q;
 
@@ -47,7 +59,7 @@ public class MergeSort<T extends Comparable<T>> implements SortingAlgorithm<T> {
         int k = p;
 
         while (i < n1 && j < n2) {
-            if (leftArray[i].compareTo(rightArray[j]) < 0)
+            if (comparator.compare(leftArray[i], rightArray[j]) < 0)
                 array[k++] = leftArray[i++];
             else
                 array[k++] = rightArray[j++];
@@ -62,7 +74,7 @@ public class MergeSort<T extends Comparable<T>> implements SortingAlgorithm<T> {
         }
     }
 
-    private void merge(List<T> list, int p, int q, int r) {
+    private void merge(List<T> list, int p, int q, int r, Comparator<T> comparator) {
         int n1 = q - p + 1;
         int n2 = r - q;
 
@@ -75,7 +87,7 @@ public class MergeSort<T extends Comparable<T>> implements SortingAlgorithm<T> {
         int k = p;
 
         while (i < n1 && j < n2) {
-            if (leftList.get(i).compareTo(rightList.get(j)) < 0)
+            if (comparator.compare(leftList.get(i), rightList.get(j)) < 0)
                 list.set(k++, leftList.get(i++));
             else
                 list.set(k++, rightList.get(j++));
