@@ -1,5 +1,6 @@
 package pl.kuglin;
 
+import pl.kuglin.algorithm.ComparisonSortingAlgorithm;
 import pl.kuglin.algorithm.MaxSubarray;
 import pl.kuglin.algorithm.RadixSort;
 import pl.kuglin.algorithm.SortingAlgorithm;
@@ -14,6 +15,18 @@ public class Utilities {
 
     public static <T extends Comparable<T>> void sort(SortingAlgorithm<T> algorithm, T[] array) {
         algorithm.sort(array);
+    }
+
+    public static <T extends Comparable<T>> void sort(SortingAlgorithm<T> algorithm, List<T> list) {
+        algorithm.sort(list);
+    }
+
+    public static <T extends Comparable<T>> void sort(ComparisonSortingAlgorithm<T> algorithm, T[] array, Comparator<T> comparator) {
+        algorithm.sort(array, comparator);
+    }
+
+    public static <T extends Comparable<T>> void sort(ComparisonSortingAlgorithm<T> algorithm, List<T> list, Comparator<T> comparator) {
+        algorithm.sort(list, comparator);
     }
 
     @SafeVarargs
