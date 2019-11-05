@@ -1,6 +1,6 @@
 # algorithms-lib
 
-***Own implementation of popular algorithms.***
+***Own implementation of popular algorithms and data structures.***
 
 > ### Implemented algorithms:
 

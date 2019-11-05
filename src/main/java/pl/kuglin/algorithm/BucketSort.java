@@ -10,13 +10,12 @@ import java.util.List;
 @SuppressWarnings({"ExplicitArrayFilling", "unchecked"})
 public class BucketSort implements SortingAlgorithm<Double> {
 
+    private static SortingAlgorithm<Double> insertionSort = new InsertionSort<>();
 
     @Override
     public void sort(Double[] array) {
 
         int n = array.length;
-
-        SortingAlgorithm<Double> insertionSort = new InsertionSort<>();
 
         LinkedList<Double>[] buckets = new LinkedList[n];
 
@@ -40,8 +39,6 @@ public class BucketSort implements SortingAlgorithm<Double> {
     public void sort(List<Double> list) {
 
         int n = list.size();
-
-        SortingAlgorithm<Double> insertionSort = new InsertionSort<>();
 
         LinkedList<Double>[] buckets = new LinkedList[n];
 
