@@ -1,4 +1,4 @@
-package pl.kuglin.algorithm;
+package pl.kuglin.datastructure;
 
 import java.util.LinkedList;
 

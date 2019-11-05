@@ -2,7 +2,7 @@
 
 ***Own implementation of popular algorithms.***
 
-> ### List of implemented algorithms:
+> ### Implemented algorithms:
 
 - ```Bubble sort```
 - ```Insertion sort```
@@ -14,6 +14,11 @@
 - ```Bucket sort```
 - ```Maximum subarray```
 - ```Selection n-th value of array```
+
+
+> ### Implemented data structures:
+
+- ```Stack```
 - ```Heap Priority Queue```
 
 
