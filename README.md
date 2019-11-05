@@ -13,6 +13,7 @@
 - ```Radix sort```
 - ```Bucket sort```
 - ```Maximum subarray```
+- ```Selection n-th value of array```
 - ```Heap Priority Queue```
 
 

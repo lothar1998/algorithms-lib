@@ -1,9 +1,6 @@
 package pl.kuglin;
 
-import pl.kuglin.algorithm.ComparisonSortingAlgorithm;
-import pl.kuglin.algorithm.MaxSubarray;
-import pl.kuglin.algorithm.RadixSort;
-import pl.kuglin.algorithm.SortingAlgorithm;
+import pl.kuglin.algorithm.*;
 
 import java.util.Comparator;
 import java.util.List;
@@ -41,6 +38,18 @@ public class Utilities {
 
     public static MaxSubarray.Result findMaxSubarray(Double[] arr, int begin, int end) {
         return MaxSubarray.findMaximumSubarray(arr, begin, end);
+    }
+
+    /**
+     * select element with n-th value from array
+     *
+     * @param array         array of comparable types
+     * @param valuePosition n-th value of element
+     * @param <T>           comparable type
+     * @return element with n-th value
+     */
+    public static <T extends Comparable<T>> T selectElementFromArray(T[] array, int valuePosition) {
+        return ArrayElementSelection.partitionSelect(array, 0, array.length - 1, valuePosition);
     }
 
     public static <T> void swap(List<T> list, int i, int j) {
