@@ -20,5 +20,6 @@
 
 - ```Stack```
 - ```Heap Priority Queue```
+- ```Binary Search Tree```
 
 
