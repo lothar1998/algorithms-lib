@@ -97,7 +97,7 @@ public class BinarySearchTree<E extends BinarySearchTree.Node, T extends Compara
             transplant(node, (E)node.getLeft());
         else {
             E minimumNode = minNode((E)node.getRight());
-            if (minimumNode.getParent() != null){
+            if (!minimumNode.getParent().equals(node)){
                 transplant(minimumNode, (E)minimumNode.getRight());
                 minimumNode.setRight(node.getRight());
                 minimumNode.getRight().setParent(minimumNode);
