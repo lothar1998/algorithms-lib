@@ -1,6 +1,7 @@
 package pl.kuglin;
 
 import pl.kuglin.algorithm.*;
+import pl.kuglin.datastructure.BinarySearchTree;
 
 import java.util.Comparator;
 import java.util.List;
@@ -34,6 +35,14 @@ public class Utilities {
     @SafeVarargs
     public static <T> void sort(RadixSort<T> algorithm, List<T> list, Comparator<T>... comparators) {
         algorithm.sort(list, comparators);
+    }
+
+    public static <E extends BinarySearchTree.Node<T>, T extends Comparable<T>> void sort(TreeSort<E, T> algorithm, E[] array){
+        algorithm.sort(array);
+    }
+
+    public static <E extends BinarySearchTree.Node<T>, T extends Comparable<T>> void sort(TreeSort<E, T> algorithm, List<E> list){
+        algorithm.sort(list);
     }
 
     public static MaxSubarray.Result findMaxSubarray(Double[] arr, int begin, int end) {

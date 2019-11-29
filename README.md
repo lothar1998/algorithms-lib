@@ -12,6 +12,7 @@
 - ```Counting sort```
 - ```Radix sort```
 - ```Bucket sort```
+- ```Tree sort```
 - ```Maximum subarray```
 - ```Selection n-th value of array```
 

@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Objects;
 
 @SuppressWarnings("unchecked")
-public class BinarySearchTree<E extends BinarySearchTree.Node, T extends Comparable<T>> {
+public class BinarySearchTree<E extends BinarySearchTree.Node<T>, T extends Comparable<T>> {
 
     private E root;
 
@@ -111,7 +111,7 @@ public class BinarySearchTree<E extends BinarySearchTree.Node, T extends Compara
     public E search(T nodeId){
         E x = root;
         while (x != null && nodeId != x.getId()) {
-            if (nodeId.compareTo((T)x.getId()) < 0)
+            if (nodeId.compareTo(x.getId()) < 0)
                 x = (E)x.getLeft();
             else
                 x = (E)x.getRight();
