@@ -5,15 +5,15 @@ import java.util.List;
 import java.util.Objects;
 
 @SuppressWarnings("unchecked")
-public class BinarySearchTree<E extends BinarySearchTree.Node<T>, T extends Comparable<T>> {
+public class BinarySearchTree<E extends BinarySearchTree.Node<T>, T extends Comparable<T>> implements Tree<E, T> {
 
-    private E root;
+    protected E root;
 
     public abstract static class Node<S extends Comparable<S>> {
-        private Node<S> parent;
-        private Node<S> left;
-        private Node<S> right;
-        private S id;
+        protected Node<S> parent;
+        protected Node<S> left;
+        protected Node<S> right;
+        protected S id;
 
         public Node(S id) {
             this.id = id;
@@ -65,6 +65,11 @@ public class BinarySearchTree<E extends BinarySearchTree.Node<T>, T extends Comp
         @Override
         public int hashCode() {
             return Objects.hash(parent, left, right, id);
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" + "id=" + id +'}';
         }
     }
 
@@ -165,8 +170,7 @@ public class BinarySearchTree<E extends BinarySearchTree.Node<T>, T extends Comp
 
     @Override
     public String toString() {
-        List<E> ascendingOrderNodes = new LinkedList<>();
-        inOrderTreeWalk(root, ascendingOrderNodes);
+        List<E> ascendingOrderNodes = inOrderList();
 
         StringBuilder builder = new StringBuilder();
         builder.append("[");
@@ -190,21 +194,21 @@ public class BinarySearchTree<E extends BinarySearchTree.Node<T>, T extends Comp
         return Objects.hash(root);
     }
 
-    private E minNode(E node){
+    protected E minNode(E node){
         E minNode = node;
         while (minNode.getLeft() != null)
             minNode = (E)minNode.getLeft();
         return minNode;
     }
 
-    private E maxNode(E node){
+    protected E maxNode(E node){
         E maxNode = node;
         while (maxNode.getRight() != null)
             maxNode = (E)maxNode.getRight();
         return maxNode;
     }
 
-    private void inOrderTreeWalk(E node, List<E> list){
+    protected void inOrderTreeWalk(E node, List<E> list){
         if (node != null){
 
             inOrderTreeWalk((E)node.getLeft(), list);

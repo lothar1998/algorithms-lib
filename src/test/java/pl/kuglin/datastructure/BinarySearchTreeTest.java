@@ -1,6 +1,7 @@
 package pl.kuglin.datastructure;
 
 import org.junit.Test;
+
 import java.util.List;
 import java.util.Random;
 
@@ -66,7 +67,7 @@ public class BinarySearchTreeTest {
             for(int i = 0; i < ARRAY_MAX_SIZE; i++)
                 objectsToTest[i] = new ObjectToTest(random.nextInt(MAX_ARRAY_VALUE));
 
-            BinarySearchTree<ObjectToTest, Integer> bst = new BinarySearchTree<>();
+            Tree<ObjectToTest, Integer> bst = new BinarySearchTree<>();
 
             for (ObjectToTest object : objectsToTest)
                 bst.insert(object);
@@ -98,7 +99,7 @@ public class BinarySearchTreeTest {
             for(int i = 0; i < ARRAY_MAX_SIZE; i++)
                 objectsToTest[i] = new ObjectToTest(random.nextInt());
 
-            BinarySearchTree<ObjectToTest, Integer> bst = new BinarySearchTree<>();
+            Tree<ObjectToTest, Integer> bst = new BinarySearchTree<>();
 
             for (ObjectToTest object : objectsToTest)
                 bst.insert(object);
@@ -117,7 +118,7 @@ public class BinarySearchTreeTest {
             for(int i = 0; i < ARRAY_MAX_SIZE; i++)
                 objectsToTest[i] = new ObjectToTest(random.nextInt(MAX_ARRAY_VALUE));
 
-            BinarySearchTree<ObjectToTest, Integer> bst = new BinarySearchTree<>();
+            Tree<ObjectToTest, Integer> bst = new BinarySearchTree<>();
 
             int min = objectsToTest[0].getId();
 
@@ -136,7 +137,7 @@ public class BinarySearchTreeTest {
         for (int j = 0; j < TESTED_EXAMPLES; j++) {
             for (int i = 0; i < ARRAY_MAX_SIZE; i++)
                 objectsToTest[i] = new ObjectToTest(random.nextInt(MAX_ARRAY_VALUE));
-            BinarySearchTree<ObjectToTest, Integer> bst = new BinarySearchTree<>();
+            Tree<ObjectToTest, Integer> bst = new BinarySearchTree<>();
 
             int max = objectsToTest[0].getId();
 
@@ -156,7 +157,7 @@ public class BinarySearchTreeTest {
             for (int i = 0; i < ARRAY_MAX_SIZE; i++)
                 objectsToTest[i] = new ObjectToTest(random.nextInt(MAX_ARRAY_VALUE));
 
-            BinarySearchTree<ObjectToTest, Integer> bst = new BinarySearchTree<>();
+            Tree<ObjectToTest, Integer> bst = new BinarySearchTree<>();
 
             for (ObjectToTest object : objectsToTest)
                 bst.insert(object);
@@ -180,7 +181,7 @@ public class BinarySearchTreeTest {
             for (int i = 0; i < ARRAY_MAX_SIZE; i++)
                 objectsToTest[i] = new ObjectToTest(random.nextInt(MAX_ARRAY_VALUE));
 
-            BinarySearchTree<ObjectToTest, Integer> bst = new BinarySearchTree<>();
+            Tree<ObjectToTest, Integer> bst = new BinarySearchTree<>();
 
             for (ObjectToTest object : objectsToTest)
                 bst.insert(object);
