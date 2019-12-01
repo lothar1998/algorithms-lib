@@ -162,14 +162,11 @@ public class BinarySearchTreeTest {
 
             List<ObjectToTest> sortedList = bst.inOrderList();
 
-            int index = random.nextInt(sortedList.size() );
+            for (int i = 0; i < sortedList.size() - 1; i++){
+                assertEquals(sortedList.get(i + 1), bst.nextNode(sortedList.get(i)));
+            }
 
-            ObjectToTest node = sortedList.get(index);
-
-            if(index + 1 > sortedList.size() - 1)
-                assertNull(bst.nextNode(node));
-            else
-                assertEquals(sortedList.get(index + 1), bst.nextNode(node));
+            assertNull(bst.nextNode(sortedList.get(sortedList.size() - 1)));
         }
     }
 
@@ -186,14 +183,11 @@ public class BinarySearchTreeTest {
 
             List<ObjectToTest> sortedList = bst.inOrderList();
 
-            int index = random.nextInt(sortedList.size() - 1);
+            for (int i = 1; i < sortedList.size(); i++){
+                assertEquals(sortedList.get(i - 1), bst.previousNode(sortedList.get(i)));
+            }
 
-            ObjectToTest node = sortedList.get(index);
-
-            if(index - 1 < 0)
-                assertNull(bst.previousNode(node));
-            else
-                assertEquals(sortedList.get(index -1), bst.previousNode(node));
+            assertNull(bst.previousNode(sortedList.get(0)));
         }
     }
 }
