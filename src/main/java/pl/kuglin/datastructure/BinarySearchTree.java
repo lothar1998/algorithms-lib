@@ -52,22 +52,6 @@ public class BinarySearchTree<E extends BinarySearchTree.Node<T>, T extends Comp
         }
 
         @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-            Node<?> node = (Node<?>) o;
-            return Objects.equals(parent, node.parent) &&
-                    Objects.equals(left, node.left) &&
-                    Objects.equals(right, node.right) &&
-                    id.equals(node.id);
-        }
-
-        @Override
-        public int hashCode() {
-            return Objects.hash(parent, left, right, id);
-        }
-
-        @Override
         public String toString() {
             return "Node{" + "id=" + id +'}';
         }
