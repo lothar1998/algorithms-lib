@@ -104,11 +104,9 @@ public class BinarySearchTreeTest {
             for (ObjectToTest object : objectsToTest)
                 bst.insert(object);
 
-            int randomIndex = random.nextInt(MAX_ARRAY_VALUE);
-
-            ObjectToTest result = bst.search(objectsToTest[randomIndex].getId());
-
-            assertEquals(objectsToTest[randomIndex].getId(), result.getId());
+            for (ObjectToTest object : objectsToTest){
+                assertNotNull(bst.search(object.getId()));
+            }
         }
     }
 
