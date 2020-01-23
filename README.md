@@ -1,8 +1,10 @@
 # algorithms-lib
+![GitHub](https://img.shields.io/github/license/lothar1998/algorithms-lib) ![GitHub](https://img.shields.io/github/languages/top/lothar1998/algorithms-lib?color=%23b07219) ![GitHub](https://img.shields.io/github/languages/code-size/lothar1998/algorithms-lib) ![GitHub](https://img.shields.io/github/last-commit/lothar1998/algorithms-lib)
 
-***Own implementation of popular algorithms and data structures.***
+### Description
+Own implementation of popular algorithms and data structures.
 
-> ### Implemented algorithms:
+### Implemented algorithms:
 
 - ```Bubble sort```
 - ```Insertion sort```
@@ -17,7 +19,7 @@
 - ```Selection n-th value of array```
 
 
-> ### Implemented data structures:
+### Implemented data structures:
 
 - ```Stack```
 - ```Heap Priority Queue```
